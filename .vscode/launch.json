@@ -1,13 +1,15 @@
+// .vscode/launch.json
 {
+    "version": "2.0.0",
     "configurations": [
         {
             "name": "C/C++: g++-9 build and debug active file",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "program": "${workspaceFolder}/main",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${fileDirname}",
+            "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
@@ -23,9 +25,8 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "C/C++: g++-9 build active file",
+            "preLaunchTask": "build",
             "miDebuggerPath": "/usr/bin/gdb"
         }
-    ],
-    "version": "2.0.0"
+    ]
 }

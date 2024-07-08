@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/vlad/Documents/FACULTA/PERSONAL_PROJ/otter-game-engine/build",
+  "command": "/usr/bin/c++    -g   -o CMakeFiles/otter_engine.dir/app/main.cpp.o -c /home/vlad/Documents/FACULTA/PERSONAL_PROJ/otter-game-engine/app/main.cpp",
+  "file": "/home/vlad/Documents/FACULTA/PERSONAL_PROJ/otter-game-engine/app/main.cpp"
+},
+{
+  "directory": "/home/vlad/Documents/FACULTA/PERSONAL_PROJ/otter-game-engine/build",
+  "command": "/usr/bin/cc   -g   -o CMakeFiles/otter_engine.dir/app/glad.c.o   -c /home/vlad/Documents/FACULTA/PERSONAL_PROJ/otter-game-engine/app/glad.c",
+  "file": "/home/vlad/Documents/FACULTA/PERSONAL_PROJ/otter-game-engine/app/glad.c"
+},
+{
+  "directory": "/home/vlad/Documents/FACULTA/PERSONAL_PROJ/otter-game-engine/build",
+  "command": "/usr/bin/c++    -g   -o CMakeFiles/otter_engine.dir/src/view/utils/Window.cpp.o -c /home/vlad/Documents/FACULTA/PERSONAL_PROJ/otter-game-engine/src/view/utils/Window.cpp",
+  "file": "/home/vlad/Documents/FACULTA/PERSONAL_PROJ/otter-game-engine/src/view/utils/Window.cpp"
+}
+]

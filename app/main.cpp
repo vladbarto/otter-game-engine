@@ -1,6 +1,11 @@
 #include <iostream>
+#include <cstring>
+#include "../src/view/utils/Window.h"
 
 int main() {
-    printf("Hello world\n");
+    
+    Window window(640, 480);
+    window.runWindow();
+    
     return 0;
 }
