@@ -1,1 +1,0 @@
-/usr/bin/c++  -g  -rdynamic CMakeFiles/otter_engine.dir/app/main.cpp.o CMakeFiles/otter_engine.dir/app/glad.c.o CMakeFiles/otter_engine.dir/src/view/utils/Window.cpp.o  -o otter_engine  -lglfw /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so 

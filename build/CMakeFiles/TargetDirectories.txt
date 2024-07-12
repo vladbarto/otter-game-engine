@@ -1,3 +1,0 @@
-/home/vlad/Documents/FACULTA/PERSONAL_PROJ/otter-game-engine/build/CMakeFiles/rebuild_cache.dir
-/home/vlad/Documents/FACULTA/PERSONAL_PROJ/otter-game-engine/build/CMakeFiles/edit_cache.dir
-/home/vlad/Documents/FACULTA/PERSONAL_PROJ/otter-game-engine/build/CMakeFiles/otter_engine.dir
