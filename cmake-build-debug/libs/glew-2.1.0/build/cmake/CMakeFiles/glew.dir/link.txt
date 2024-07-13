@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/cc -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -dynamiclib -Wl,-headerpad_max_install_names -compatibility_version 2.1.0 -current_version 2.1.0 -o ../../../../lib/libGLEWd.2.1.0.dylib -install_name @rpath/libGLEWd.2.1.dylib CMakeFiles/glew.dir/__/__/src/glew.c.o  -framework OpenGL -framework OpenGL 
