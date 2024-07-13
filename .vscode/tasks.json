@@ -1,4 +1,3 @@
-// .vscode/tasks.json
 {
     "version": "2.0.0",
     "tasks": [
@@ -8,7 +7,7 @@
             "command": "bash",
             "args": [
                 "-c",
-                "g++-9 -fdiagnostics-color=always -g $(find ${workspaceFolder} -name '*.cpp') -o ${workspaceFolder}/main ${workspaceFolder}/app/glad.c -ldl -lglfw -lGL"
+                "g++ -fdiagnostics-color=always -g $(find ${workspaceFolder} -name '*.cpp') -o ${workspaceFolder}/main ${workspaceFolder}/app/glad.c -ldl -lglfw -framework OpenGL"
             ],
             "group": {
                 "kind": "build",
