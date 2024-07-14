@@ -4,6 +4,8 @@
 #include <ShaderProgram.h>
 #include <memory>
 #include <AssetManager.h>
+
+#include "ObjectLoader.h"
 #include "Transform.h"
 
 class Scene
@@ -28,9 +30,12 @@ private:
 	OpenGLWindow* m_window;
 	AssetManager m_assets;
     ShaderProgram* m_shader;
-    GLuint vaoID_tyre, vaoID_cube, vboID_tyre, vboID_cube;
+    GLuint vboID, vaoID, vaoID_tyre, vaoID_cube, vboID_tyre, vboID_cube;
+	OBJResult objResult;
 
     glm::vec3 cameraPosition = glm::vec3(0.0f, 0.0f, -10.0f);
+
+	Transform suzanne;
 
     Transform FrontAxis_L;
     Transform FrontAxis_R;
@@ -56,12 +61,12 @@ private:
     glm::vec3 matDiffuse;
     glm::vec3 matEmissive;
 
+	Result attempt;
+
     void Szenegraph_Tyres();
 
     void Szenegraph_Main_Body();
 
     void Szenegraph_Spoiler();
-
-    void render_shapes_on_screen();
 };
 

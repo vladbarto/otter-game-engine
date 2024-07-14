@@ -20,4 +20,9 @@ struct Vertex
 
 typedef GLuint Index;
 
+struct FaceIndices {
+	GLuint pos;
+	GLuint normal;
+	GLuint tex;
+};
 #endif

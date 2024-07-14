@@ -7,18 +7,6 @@ CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
   CMake that the project does not need compatibility with older versions.
 
 
--- The C compiler identification is AppleClang 14.0.3.14030022
--- The CXX compiler identification is AppleClang 14.0.3.14030022
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc - skipped
--- Detecting C compile features
--- Detecting C compile features - done
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Check for working CXX compiler: /Library/Developer/CommandLineTools/usr/bin/c++ - skipped
--- Detecting CXX compile features
--- Detecting CXX compile features - done
 CMake Deprecation Warning at libs/CMakeLists.txt:1 (cmake_minimum_required):
   Compatibility with CMake < 3.5 will be removed from a future version of
   CMake.
@@ -63,9 +51,6 @@ CMake Deprecation Warning at libs/glfw-3.2.1/CMakeLists.txt:10 (cmake_policy):
   behavior and not rely on setting a policy to OLD.
 
 
--- Performing Test CMAKE_HAVE_LIBC_PTHREAD
--- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
--- Found Threads: TRUE  
 -- Could NOT find Vulkan (missing: VULKAN_LIBRARY VULKAN_INCLUDE_DIR) 
 -- Using Cocoa for window creation
 CMake Deprecation Warning at libs/glew-2.1.0/build/cmake/CMakeLists.txt:7 (cmake_minimum_required):
@@ -76,7 +61,6 @@ CMake Deprecation Warning at libs/glew-2.1.0/build/cmake/CMakeLists.txt:7 (cmake
   CMake that the project does not need compatibility with older versions.
 
 
--- Found OpenGL: /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/OpenGL.framework   
 CMake Deprecation Warning at libs/stb/CMakeLists.txt:1 (cmake_minimum_required):
   Compatibility with CMake < 3.5 will be removed from a future version of
   CMake.
@@ -85,6 +69,6 @@ CMake Deprecation Warning at libs/stb/CMakeLists.txt:1 (cmake_minimum_required):
   CMake that the project does not need compatibility with older versions.
 
 
--- Configuring done (1.1s)
+-- Configuring done (0.2s)
 -- Generating done (0.0s)
 -- Build files have been written to: /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug

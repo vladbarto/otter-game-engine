@@ -5,6 +5,8 @@
 #include <AssetManager.h>
 #include <stdio.h>
 
+#include "ObjectLoader.h"
+
 int FrameCounter = 0;
 
 Scene::Scene(OpenGLWindow * window) :
@@ -85,6 +87,52 @@ void Scene::Szenegraph_Spoiler () {
     Spoiler.rotate(tilt_spoiler);
     Spoiler.scale(scale_spoiler);
 }
+
+void load_obj(const char* filename,
+              std::vector<glm::vec4> &vertices,
+              std::vector<glm::vec3> &normals,
+              std::vector<GLushort> &elements)
+{
+    // https://en.wikibooks.org/wiki/OpenGL_Programming/Modern_OpenGL_Tutorial_Load_OBJ
+    std::ifstream in(filename, std::ios::in);
+    if (!in)
+    {
+        std::cerr << "Cannot open " << filename << std::endl; exit(1);
+    }
+
+    std::string line;
+    while (getline(in, line))
+    {
+        if (line.substr(0,2) == "v ")
+        {
+            std::istringstream s(line.substr(2));
+            glm::vec4 v; s >> v.x; s >> v.y; s >> v.z; v.w = 1.0f;
+            vertices.push_back(v);
+        }
+        else if (line.substr(0,2) == "f ")
+        {
+            std::istringstream s(line.substr(2));
+            GLushort a,b,c;
+            s >> a; s >> b; s >> c;
+            a--; b--; c--;
+            elements.push_back(a); elements.push_back(b); elements.push_back(c);
+        }
+        /* anything else is ignored */
+    }
+
+    normals.resize(vertices.size(), glm::vec3(0.0, 0.0, 0.0));
+    for (int i = 0; i < elements.size(); i+=3)
+    {
+        GLushort ia = elements[i];
+        GLushort ib = elements[i+1];
+        GLushort ic = elements[i+2];
+        glm::vec3 normal = glm::normalize(glm::cross(
+                glm::vec3(vertices[ib]) - glm::vec3(vertices[ia]),
+                glm::vec3(vertices[ic]) - glm::vec3(vertices[ia])));
+        normals[ia] = normals[ib] = normals[ic] = normal;
+    }
+}
+
 bool Scene::init()
 {
 	try
@@ -94,62 +142,46 @@ bool Scene::init()
 		m_shader = m_assets.getShaderProgram("shader");
         m_shader->use();
 
-        // Aufgabe 1.1 a
-        glGenBuffers(1, &vboID_tyre); // VBO now generated
-        glBindBuffer(GL_ARRAY_BUFFER, vboID_tyre); // VBO now activated
-        glBufferData(GL_ARRAY_BUFFER, sizeof(tyreVert), &tyreVert, GL_STATIC_DRAW); // VBO now fulled up with data vertex
-        // Aufgabe 1.1 b
-        glGenVertexArrays(1, &vaoID_tyre); // VAO now generated
-        glBindVertexArray(vaoID_tyre);  // Bind VAO_Tyre
+	    // load object
+	    std::string objpath = "/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/src/Game/Blender_objects/cone.obj";
+//        objResult = OBJLoader::loadOBJ(objpath);
+        ObjectLoader objectLoader;
+	    attempt = objectLoader.loadObject(objpath);
+	    attempt.displayArrays();
 
-        // Aufgabe 1.1 c
-        // describe VBO in VAO
-        glVertexAttribPointer(0, 3, GL_FLOAT, false, 24, 0); //function call for Vertices (x, y, z)
-        glEnableVertexAttribArray(0);
-        glVertexAttribPointer(1, 3, GL_FLOAT, false, 24, (void*)24); //function call for Vertices (r, g, b)
-        glEnableVertexAttribArray(1);
+	    std::vector<glm::vec4> vertices;
+        std::vector<glm::vec3> normals;
+        std::vector<GLushort> elements;
 
-        // Aufgabe 1.1 d : Setup IBO
-        GLuint iboID_tyre, iboID_cube;
-        glGenBuffers(1, &iboID_tyre); // only works after glGenVertexArrays()
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, iboID_tyre);
-        glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(tyreInd), tyreInd, GL_STATIC_DRAW);
+	    load_obj(objpath.c_str(), vertices, normals, elements);
 
-        // Aufgabe 1.1 e : Loeschen (unbind, delete)
-//        glDeleteVertexArrays(1, &vaoID);
-//        glDeleteBuffers(1, &vboID);
-        /**
-         * Here we will place our Szenegraph for wheels
-         */
-        Szenegraph_Tyres();
+        // generate and activate VBO and upload data
+	    glGenBuffers(1, &vboID);
+	    glBindBuffer(GL_ARRAY_BUFFER, vboID);
+	    glBufferData(GL_ARRAY_BUFFER,
+	        attempt.getVerticesSize(),// * sizeof(Vertex),
+	        attempt.getVertices(),
+	        GL_STATIC_DRAW);
 
-        glBindVertexArray(0);  // Unbind VAO_Tyre
+	    // generate and activate VAO
+	    glGenVertexArrays(1, &vaoID);
+	    glBindVertexArray(vaoID);
 
-        glGenBuffers(1, &vboID_cube); // VBO now generated
-        glBindBuffer(GL_ARRAY_BUFFER, vboID_cube); // VBO now activated
-        glBufferData(GL_ARRAY_BUFFER, sizeof(cubeVert), &cubeVert, GL_STATIC_DRAW); // VBO now fulled up with data vertex
+	    int stride = 8*sizeof(int);
+	    // describe VBO in the VAO
+	    glVertexAttribPointer(0, 3, GL_FLOAT, false, stride, 0);
+	    glEnableVertexAttribArray(0);
+	    glVertexAttribPointer(1, 2, GL_FLOAT, false, stride, (void*)12);
+	    glEnableVertexAttribArray(1);
+	    glVertexAttribPointer(2, 3, GL_FLOAT, false, stride, (void*)20);
+	    glEnableVertexAttribArray(2);
 
-        glGenVertexArrays(1, &vaoID_cube); // VAO now generated
-        glBindVertexArray(vaoID_cube);  //Bind VAO_Cube
-
-        // describe VBO in VAO (again)
-        glVertexAttribPointer(0, 3, GL_FLOAT, false, 36, 0); //function call for Vertices (x, y, z)
-        glEnableVertexAttribArray(0);
-        glVertexAttribPointer(1, 3, GL_FLOAT, false, 36, (void*)12); //function call for Vertex_Normals (nx, ny, nz)
-        glEnableVertexAttribArray(1);
-        glVertexAttribPointer(2, 3, GL_FLOAT, false, 36, (void*)24); //function call for Vertices (r, g, b)
-        glEnableVertexAttribArray(2);
-
-
-        glGenBuffers(1, &iboID_cube); // only works after glGenVertexArrays()
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, iboID_cube);
-        glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(cubeInd), cubeInd, GL_STATIC_DRAW);
-
-        /**
-         * Here will take place the Szenegraph for cubes
-         */
-        Szenegraph_Main_Body();
-        Szenegraph_Spoiler();
+	    // setup IBO
+	    GLuint iboID;
+	    glGenBuffers(1, &iboID);
+	    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, iboID);
+	    glBufferData(GL_ELEMENT_ARRAY_BUFFER, attempt.getIndicesSize(),
+	        attempt.getIndices(), GL_STATIC_DRAW);
 
         lichtQuelle = glm::vec3(0.0, 0.0, 0.0);
         //lichtFarbe = glm::vec3(1.0, 94.0/255., 5.0/255.0);
@@ -162,9 +194,9 @@ bool Scene::init()
         matEmissive = glm::vec3(0.0, 1.0, 0.0);
 
         // Aufgabe 1.4
-        glEnable(GL_CULL_FACE);
-        glFrontFace(GL_CCW);
-        glCullFace(GL_BACK);
+        // glEnable(GL_CULL_FACE);
+        // glFrontFace(GL_CCW);
+        // glCullFace(GL_BACK);
 
         // Aufgabe 2.3.3: Deep Test activation for OpenGL
         glEnable(GL_DEPTH_TEST);
@@ -179,48 +211,6 @@ bool Scene::init()
 	    throw std::logic_error("Scene initialization failed:\n" + std::string(ex.what()) + "\n");
 	}
 }
-void Scene::render_shapes_on_screen () {
-    /**
-     * Render the wheels, contained in vaoID_tyre
-     */
-    m_shader->setUniform("model", FrontAxis_L.getMatrix(), false);
-    glBindVertexArray(vaoID_tyre); // activate VAO (only once needed)
-    glDrawElements(GL_TRIANGLES, sizeof(tyreInd), GL_UNSIGNED_INT, 0);
-
-    m_shader->setUniform("model", FrontAxis_R.getMatrix(), false);
-    glDrawElements(GL_TRIANGLES, sizeof(tyreInd), GL_UNSIGNED_INT, 0);
-
-    m_shader->setUniform("model", RearAxis_L.getMatrix(), false);
-    glDrawElements(GL_TRIANGLES, sizeof(tyreInd), GL_UNSIGNED_INT, 0);
-
-    m_shader->setUniform("model", RearAxis_R.getMatrix(), false);
-    glDrawElements(GL_TRIANGLES, sizeof(tyreInd), GL_UNSIGNED_INT, 0);
-
-    m_shader->setUniform("model", Floor.getMatrix(), false);
-    glBindVertexArray(vaoID_cube); // activate VAO (only once needed)
-    glDrawElements(GL_TRIANGLES, sizeof(cubeInd), GL_UNSIGNED_INT, 0);
-
-    m_shader->setUniform("model", Cockpit.getMatrix(), false);
-    glDrawElements(GL_TRIANGLES, sizeof(cubeInd), GL_UNSIGNED_INT, 0);
-
-    m_shader->setUniform("model", Chair_bottom.getMatrix(), false);
-    glDrawElements(GL_TRIANGLES, sizeof(cubeInd), GL_UNSIGNED_INT, 0);
-
-    m_shader->setUniform("model", Chair_back.getMatrix(), false);
-    glDrawElements(GL_TRIANGLES, sizeof(cubeInd), GL_UNSIGNED_INT, 0);
-
-    m_shader->setUniform("model", Pillar_L.getMatrix(), false);
-    glDrawElements(GL_TRIANGLES, sizeof(cubeInd), GL_UNSIGNED_INT, 0);
-
-    m_shader->setUniform("model", Pillar_R.getMatrix(), false);
-    glDrawElements(GL_TRIANGLES, sizeof(cubeInd), GL_UNSIGNED_INT, 0);
-
-    m_shader->setUniform("model", Spoiler.getMatrix(), false);
-    glDrawElements(GL_TRIANGLES, sizeof(cubeInd), GL_UNSIGNED_INT, 0);
-
-    m_shader->setUniform("model", cube.getMatrix(), false);
-    glDrawElements(GL_TRIANGLES, sizeof(cubeInd), GL_UNSIGNED_INT, 0);
-}
 
 //Global:
 float displacement_factor = 0;
@@ -231,11 +221,13 @@ void Scene::render(float dt)
     /**
      * Aufgabe 2.3.2: Hintergrund löschen
      */
-    //glClearColor(0.0f, 0.66f, 0.37f, 1.0f);
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-    render_shapes_on_screen();
+    // activate VAO
+    m_shader->setUniform("model", suzanne.getMatrix(), false);
+    glBindVertexArray(vaoID);
+    glDrawElements(GL_TRIANGLES, attempt.getIndicesSize(), GL_UNSIGNED_INT, 0);
 
     /**
      * Deal with color animation
@@ -243,40 +235,6 @@ void Scene::render(float dt)
     static float animationTime = 0.0f;
     animationTime += dt;
     m_shader->setUniform("animation", animationTime/10);
-
-    float angleDegrees = 45.0f * dt;
-    float angleRadians = glm::radians(angleDegrees);
-    glm::vec3 axis = glm::vec3(0.0f, 0.0f, 1.0f);
-    glm::quat rotation = glm::angleAxis(angleRadians, axis);
-
-    glm::vec3 jointFrontAxisR = glm::vec3(-1.5f+displacement_factor, -0.1f, 0.3f);
-    FrontAxis_R.rotateAroundPoint(jointFrontAxisR, glm::vec3(0.0f, 0.0f, angleDegrees/10));
-
-    glm::vec3 jointFrontAxisL = glm::vec3(-1.5f+displacement_factor, -0.1f, -0.3f);
-    FrontAxis_L.rotateAroundPoint(jointFrontAxisL, glm::vec3(0.0f, 0.0f, angleDegrees/10));
-
-    glm::vec3 jointRearAxisR = glm::vec3(1.5f+displacement_factor, -0.1f, 0.3f);
-    RearAxis_R.rotateAroundPoint(jointRearAxisR, glm::vec3(0.0f, 0.0f, angleDegrees/10));
-
-    glm::vec3 jointRearAxisL = glm::vec3(1.5f+displacement_factor, -0.1f, -0.3f);
-    RearAxis_L.rotateAroundPoint(jointRearAxisL, glm::vec3(0.0f, 0.0f, angleDegrees/10));
-
-    glm::vec4 translate_car = glm::vec4(-0.02f, 0.0f, 0.0f, 1.0f);
-
-    if(launchTrigger == 1)
-    {    /**
-         * De-comment this block to make the car move
-         * Comment this block to make the car stay where it is
-         */
-        displacement_factor += -0.02f;
-        Floor.translate(translate_car);
-        Cockpit.translate(translate_car);
-        Chair_bottom.translate(translate_car);
-        Chair_back.translate(translate_car);
-        Pillar_L.translate(translate_car);
-        Pillar_R.translate(translate_car);
-        Spoiler.translate(translate_car);
-    }
 
     glBindVertexArray(0); // good programmers should use reset
     /**
@@ -378,6 +336,13 @@ void Scene::update(float dt)
     m_shader->setUniform("matShininess", shininess);
     //m_shader->setUniform("matDiffuse", matDiffuse);
     //m_shader->setUniform("matEmissive", matEmissive);
+
+    if(m_window->getInput().getKeyState(Key::O) == KeyState::Pressed) {
+        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    }
+    if(m_window->getInput().getKeyState(Key::P) == KeyState::Pressed) {
+        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+    }
 }
 
 OpenGLWindow * Scene::getWindow()
