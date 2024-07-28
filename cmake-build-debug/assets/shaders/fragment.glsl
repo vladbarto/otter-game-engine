@@ -1,6 +1,7 @@
 #version 330 core
 
-in vec3 colorVS;
+//in vec3 colorVS;
+in vec2 texcoordsVS_0;
 
 //fragment shader output
 out vec4 color;
@@ -14,9 +15,9 @@ uniform vec3 matEmissive;
 uniform vec3 matSpecular;
 uniform float matShininess;
 
-void main(){
-    color = vec4(colorVS, 1.0);
+uniform sampler2D tex0;
 
+void main(){
     // normalise everything necessary
     vec3 N = normalize(Normal);
     vec3 L = normalize(LightDir);
@@ -24,7 +25,7 @@ void main(){
     // diffuse component
     float cosa = max(0.0, dot(N, L));
     vec3 DiffuseTerm = matDiffuse * lightColor;
-    color += vec4(DiffuseTerm * cosa, 1.0);
+    color = vec4(DiffuseTerm * cosa, 1.0);
 
     // ambient emissive component
     vec3 AmbientEmissiveTerm = matEmissive + matDiffuse * lightColorAmbient;
@@ -39,5 +40,7 @@ void main(){
 
     vec3 SpecularTerm = matSpecular * lightColor;
     color += vec4(SpecularTerm * cosBetak, 0.0);
+
+    color += texture(tex0, texcoordsVS_0);
 }
 

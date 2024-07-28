@@ -29,19 +29,19 @@ Result ObjectLoader::loadObject(const std::string &objpath)
                 continue;
             }
             if(command == "v") {
-                vertices.push_back(parsePosition(line2bagofwords(line)));
+                vertices.push_back(parsePosition(lineToTokenArray(line)));
                 continue;
             }
             if(command == "vn") {
-                normals.push_back(parseNormals(line2bagofwords(line)));
+                normals.push_back(parseNormals(lineToTokenArray(line)));
                 continue;
             }
             if(command == "vt") {
-                textureCoords.push_back(parseTextureCoords(line2bagofwords(line)));
+                textureCoords.push_back(parseTextureCoords(lineToTokenArray(line)));
                 continue;
             }
             if(command == "f") {
-                parseFaces(line2bagofwords(line), faceIndices);
+                parseFaces(lineToTokenArray(line), faceIndices);
                 continue;
             }
         }
@@ -58,7 +58,7 @@ Result ObjectLoader::loadObject(const std::string &objpath)
             final_verts[final_inds[indIdx]*8 + 2] = vertices[faceIndices[indIdx].pos].z;
 
             final_verts[final_inds[indIdx]*8 + 3] = textureCoords[faceIndices[indIdx].tex].s;
-            final_verts[final_inds[indIdx]*8 + 4] = textureCoords[faceIndices[indIdx].tex].t;
+            final_verts[final_inds[indIdx]*8 + 4] = 1-textureCoords[faceIndices[indIdx].tex].t; // openGL needs to flip the y coordinate
 
             final_verts[final_inds[indIdx]*8 + 5] = normals[faceIndices[indIdx].normal].x;
             final_verts[final_inds[indIdx]*8 + 6] = normals[faceIndices[indIdx].normal].y;
@@ -87,7 +87,7 @@ std::string ObjectLoader::getCommand(std::string stream) {
     return word;
 }
 
-std::vector<std::string> ObjectLoader::line2bagofwords(std::string stream) {
+std::vector<std::string> ObjectLoader::lineToTokenArray(std::string stream) {
     std::vector<std::string> arrayOfWords;
     std::string word;
     int idx;

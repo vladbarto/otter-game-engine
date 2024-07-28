@@ -1,6 +1,7 @@
 #version 330 core
 
-in vec3 colorVS;
+//in vec3 colorVS;
+in vec2 texcoordsVS_0;
 
 //fragment shader output
 out vec4 color;
@@ -13,6 +14,8 @@ uniform vec3 matEmissive;
 
 uniform vec3 matSpecular;
 uniform float matShininess;
+
+uniform sampler2D tex0;
 
 void main(){
     // normalise everything necessary
@@ -37,5 +40,7 @@ void main(){
 
     vec3 SpecularTerm = matSpecular * lightColor;
     color += vec4(SpecularTerm * cosBetak, 0.0);
+
+    color += texture(tex0, texcoordsVS_0);
 }
 

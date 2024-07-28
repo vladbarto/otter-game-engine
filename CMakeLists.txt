@@ -1,10 +1,15 @@
 cmake_minimum_required(VERSION 3.0)
 project(OpenGL_Praktikum)
 
-set(SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp" src/Game/Tyre.h src/Game/House.h src/Game/NameInitials.h
-        src/compute_normals.cpp
+set(SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp" src/Assets/Tyre.h src/Assets/House.h src/Assets/NameInitials.h
         framework/ObjectLoader.cpp
-        framework/ObjectLoader.h)
+        framework/ObjectLoader.h
+        src/Game/SceneManager.cpp
+        src/Game/SceneManager.h
+        src/Framework/Rendering/Material.cpp
+        src/Framework/Rendering/Material.h
+        src/Framework/SceneElements/GameObject.cpp
+        src/Framework/SceneElements/GameObject.h)
 set(INCLUDES "${CMAKE_CURRENT_SOURCE_DIR}/src")
 
 ##-------------------------------add your source files here-------------------------------------------------------------

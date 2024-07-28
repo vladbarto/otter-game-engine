@@ -2,9 +2,9 @@
 
 #include "OpenGLWindow.h"
 #include <ShaderProgram.h>
-#include <memory>
 #include <AssetManager.h>
 
+#include "GameObject.h"
 #include "ObjectLoader.h"
 #include "Transform.h"
 
@@ -17,6 +17,7 @@ public:
 	bool init();
 	void shutdown();
 	void render(float dt);
+
 	void update(float dt);
 	OpenGLWindow* getWindow();
 
@@ -29,44 +30,22 @@ public:
 private:
 	OpenGLWindow* m_window;
 	AssetManager m_assets;
-    ShaderProgram* m_shader;
-    GLuint vboID, vaoID, vaoID_tyre, vaoID_cube, vboID_tyre, vboID_cube;
-	OBJResult objResult;
+    ShaderProgram* m_shader{};
 
-    glm::vec3 cameraPosition = glm::vec3(0.0f, 0.0f, -10.0f);
+	// camera
+    glm::vec3 cameraTarget = glm::vec3(0.0f, 0.0f, 0.0f);
+	Transform camera;
+	glm::vec3 upVector = glm::vec3(0.0f, 1.0f, 0.0f);
 
-	Transform suzanne;
+	// scene illumination
+	glm::vec3 lightSource;
+	glm::vec3 lightColour;
+	float lightIntensity;
 
-    Transform FrontAxis_L;
-    Transform FrontAxis_R;
-    Transform RearAxis_L;
-    Transform RearAxis_R;
-
-    Transform Floor;
-    Transform Cockpit;
-    Transform Chair_bottom;
-    Transform Chair_back;
-    Transform Pillar_L;
-    Transform Pillar_R;
-    Transform Spoiler;
-
-    Transform cube;
-
-    glm::vec3 lichtQuelle;
-    glm::vec3 lichtFarbe;
-    float lichtIntensitat;
-    glm::vec3 ambientLight;
-    glm::vec3 specularFarbe;  // 1.Materialparameter
-    float shininess;  // 2.Materialparameter; Glanzfaktor k
-    glm::vec3 matDiffuse;
-    glm::vec3 matEmissive;
-
+	// loaded object
 	Result attempt;
 
-    void Szenegraph_Tyres();
-
-    void Szenegraph_Main_Body();
-
-    void Szenegraph_Spoiler();
+	// all game objects from a scene
+	std::vector<GameObject> gameObject;
 };
 

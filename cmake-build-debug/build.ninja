@@ -57,14 +57,6 @@ build CMakeFiles/OpenGL_Praktikum.dir/src/main.cpp.o: CXX_COMPILER__OpenGL_Prakt
   OBJECT_DIR = CMakeFiles/OpenGL_Praktikum.dir
   OBJECT_FILE_DIR = CMakeFiles/OpenGL_Praktikum.dir/src
 
-build CMakeFiles/OpenGL_Praktikum.dir/src/compute_normals.cpp.o: CXX_COMPILER__OpenGL_Praktikum_unscanned_Debug /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/src/compute_normals.cpp || cmake_object_order_depends_target_OpenGL_Praktikum
-  DEFINES = -DGLEW_STATIC
-  DEP_FILE = CMakeFiles/OpenGL_Praktikum.dir/src/compute_normals.cpp.o.d
-  FLAGS = -g -std=gnu++11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics
-  INCLUDES = -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/src -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/src/Framework/Assets -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/src/Framework/Rendering -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/src/Framework/SceneElements -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/src/Game -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/framework -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/glfw-3.2.1/include -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/glew-2.1.0/include -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/glew-2.1.0/include/GL -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/glm-master -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/stb
-  OBJECT_DIR = CMakeFiles/OpenGL_Praktikum.dir
-  OBJECT_FILE_DIR = CMakeFiles/OpenGL_Praktikum.dir/src
-
 build CMakeFiles/OpenGL_Praktikum.dir/framework/ObjectLoader.cpp.o: CXX_COMPILER__OpenGL_Praktikum_unscanned_Debug /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/framework/ObjectLoader.cpp || cmake_object_order_depends_target_OpenGL_Praktikum
   DEFINES = -DGLEW_STATIC
   DEP_FILE = CMakeFiles/OpenGL_Praktikum.dir/framework/ObjectLoader.cpp.o.d
@@ -72,6 +64,30 @@ build CMakeFiles/OpenGL_Praktikum.dir/framework/ObjectLoader.cpp.o: CXX_COMPILER
   INCLUDES = -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/src -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/src/Framework/Assets -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/src/Framework/Rendering -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/src/Framework/SceneElements -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/src/Game -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/framework -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/glfw-3.2.1/include -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/glew-2.1.0/include -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/glew-2.1.0/include/GL -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/glm-master -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/stb
   OBJECT_DIR = CMakeFiles/OpenGL_Praktikum.dir
   OBJECT_FILE_DIR = CMakeFiles/OpenGL_Praktikum.dir/framework
+
+build CMakeFiles/OpenGL_Praktikum.dir/src/Game/SceneManager.cpp.o: CXX_COMPILER__OpenGL_Praktikum_unscanned_Debug /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/src/Game/SceneManager.cpp || cmake_object_order_depends_target_OpenGL_Praktikum
+  DEFINES = -DGLEW_STATIC
+  DEP_FILE = CMakeFiles/OpenGL_Praktikum.dir/src/Game/SceneManager.cpp.o.d
+  FLAGS = -g -std=gnu++11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/src -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/src/Framework/Assets -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/src/Framework/Rendering -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/src/Framework/SceneElements -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/src/Game -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/framework -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/glfw-3.2.1/include -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/glew-2.1.0/include -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/glew-2.1.0/include/GL -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/glm-master -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/stb
+  OBJECT_DIR = CMakeFiles/OpenGL_Praktikum.dir
+  OBJECT_FILE_DIR = CMakeFiles/OpenGL_Praktikum.dir/src/Game
+
+build CMakeFiles/OpenGL_Praktikum.dir/src/Framework/Rendering/Material.cpp.o: CXX_COMPILER__OpenGL_Praktikum_unscanned_Debug /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/src/Framework/Rendering/Material.cpp || cmake_object_order_depends_target_OpenGL_Praktikum
+  DEFINES = -DGLEW_STATIC
+  DEP_FILE = CMakeFiles/OpenGL_Praktikum.dir/src/Framework/Rendering/Material.cpp.o.d
+  FLAGS = -g -std=gnu++11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/src -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/src/Framework/Assets -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/src/Framework/Rendering -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/src/Framework/SceneElements -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/src/Game -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/framework -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/glfw-3.2.1/include -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/glew-2.1.0/include -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/glew-2.1.0/include/GL -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/glm-master -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/stb
+  OBJECT_DIR = CMakeFiles/OpenGL_Praktikum.dir
+  OBJECT_FILE_DIR = CMakeFiles/OpenGL_Praktikum.dir/src/Framework/Rendering
+
+build CMakeFiles/OpenGL_Praktikum.dir/src/Framework/SceneElements/GameObject.cpp.o: CXX_COMPILER__OpenGL_Praktikum_unscanned_Debug /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/src/Framework/SceneElements/GameObject.cpp || cmake_object_order_depends_target_OpenGL_Praktikum
+  DEFINES = -DGLEW_STATIC
+  DEP_FILE = CMakeFiles/OpenGL_Praktikum.dir/src/Framework/SceneElements/GameObject.cpp.o.d
+  FLAGS = -g -std=gnu++11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/src -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/src/Framework/Assets -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/src/Framework/Rendering -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/src/Framework/SceneElements -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/src/Game -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/framework -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/glfw-3.2.1/include -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/glew-2.1.0/include -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/glew-2.1.0/include/GL -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/glm-master -I/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/stb
+  OBJECT_DIR = CMakeFiles/OpenGL_Praktikum.dir
+  OBJECT_FILE_DIR = CMakeFiles/OpenGL_Praktikum.dir/src/Framework/SceneElements
 
 build CMakeFiles/OpenGL_Praktikum.dir/src/Framework/Assets/AssetManager.cpp.o: CXX_COMPILER__OpenGL_Praktikum_unscanned_Debug /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/src/Framework/Assets/AssetManager.cpp || cmake_object_order_depends_target_OpenGL_Praktikum
   DEFINES = -DGLEW_STATIC
@@ -161,7 +177,7 @@ build CMakeFiles/OpenGL_Praktikum.dir/framework/OBJLoader.cpp.o: CXX_COMPILER__O
 #############################################
 # Link the executable OpenGL_Praktikum
 
-build OpenGL_Praktikum: CXX_EXECUTABLE_LINKER__OpenGL_Praktikum_Debug CMakeFiles/OpenGL_Praktikum.dir/src/main.cpp.o CMakeFiles/OpenGL_Praktikum.dir/src/compute_normals.cpp.o CMakeFiles/OpenGL_Praktikum.dir/framework/ObjectLoader.cpp.o CMakeFiles/OpenGL_Praktikum.dir/src/Framework/Assets/AssetManager.cpp.o CMakeFiles/OpenGL_Praktikum.dir/src/Framework/Assets/ShaderProgram.cpp.o CMakeFiles/OpenGL_Praktikum.dir/src/Framework/Rendering/Primitives.cpp.o CMakeFiles/OpenGL_Praktikum.dir/src/Framework/SceneElements/Transform.cpp.o CMakeFiles/OpenGL_Praktikum.dir/src/Game/Window.cpp.o CMakeFiles/OpenGL_Praktikum.dir/src/Game/Scene.cpp.o CMakeFiles/OpenGL_Praktikum.dir/framework/OpenGLWindow.cpp.o CMakeFiles/OpenGL_Praktikum.dir/framework/glerror.cpp.o CMakeFiles/OpenGL_Praktikum.dir/framework/Input.cpp.o CMakeFiles/OpenGL_Praktikum.dir/framework/OBJLoader.cpp.o | libs/glfw-3.2.1/src/libglfw3.a lib/libGLEWd.a libs/stb/libstb.a || lib/libGLEWd.a libs/glfw-3.2.1/src/libglfw3.a libs/stb/libstb.a
+build OpenGL_Praktikum: CXX_EXECUTABLE_LINKER__OpenGL_Praktikum_Debug CMakeFiles/OpenGL_Praktikum.dir/src/main.cpp.o CMakeFiles/OpenGL_Praktikum.dir/framework/ObjectLoader.cpp.o CMakeFiles/OpenGL_Praktikum.dir/src/Game/SceneManager.cpp.o CMakeFiles/OpenGL_Praktikum.dir/src/Framework/Rendering/Material.cpp.o CMakeFiles/OpenGL_Praktikum.dir/src/Framework/SceneElements/GameObject.cpp.o CMakeFiles/OpenGL_Praktikum.dir/src/Framework/Assets/AssetManager.cpp.o CMakeFiles/OpenGL_Praktikum.dir/src/Framework/Assets/ShaderProgram.cpp.o CMakeFiles/OpenGL_Praktikum.dir/src/Framework/Rendering/Primitives.cpp.o CMakeFiles/OpenGL_Praktikum.dir/src/Framework/SceneElements/Transform.cpp.o CMakeFiles/OpenGL_Praktikum.dir/src/Game/Window.cpp.o CMakeFiles/OpenGL_Praktikum.dir/src/Game/Scene.cpp.o CMakeFiles/OpenGL_Praktikum.dir/framework/OpenGLWindow.cpp.o CMakeFiles/OpenGL_Praktikum.dir/framework/glerror.cpp.o CMakeFiles/OpenGL_Praktikum.dir/framework/Input.cpp.o CMakeFiles/OpenGL_Praktikum.dir/framework/OBJLoader.cpp.o | libs/glfw-3.2.1/src/libglfw3.a lib/libGLEWd.a libs/stb/libstb.a || lib/libGLEWd.a libs/glfw-3.2.1/src/libglfw3.a libs/stb/libstb.a
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
   LINK_LIBRARIES = libs/glfw-3.2.1/src/libglfw3.a  -framework Cocoa  -framework IOKit  -framework CoreFoundation  -framework CoreVideo  lib/libGLEWd.a  -framework OpenGL  libs/stb/libstb.a
   OBJECT_DIR = CMakeFiles/OpenGL_Praktikum.dir

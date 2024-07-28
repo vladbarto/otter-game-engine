@@ -11,10 +11,7 @@
 #include <vector>
 #include <fstream>
 #include <iostream>
-#include <cctype>
-#include <unordered_map>
 #include <CommonTypes.h>
-#include "OBJLoader.h"
 #include <stdlib.h>
 
 class Result;
@@ -25,7 +22,7 @@ public:
     ~ObjectLoader() {}
 
     Result loadObject(const std::string &objpath);
-    static std::vector<std::string> line2bagofwords(std::string stream);
+    static std::vector<std::string> lineToTokenArray(std::string stream);
     static std::string getCommand(std::string stream);
 
     glm::vec3 parsePosition(std::vector<std::string> array);
@@ -89,14 +86,14 @@ public:
 //        free(indices);
 //    }
 
-    // Function to initialize arrays (example, you can modify as needed)
+    // Function to initialize arrays
     void initializeArrays() {
         for (int i = 0; i < verticesSize; ++i) {
-            vertices[i] = i * 1.5; // Example initialization
+            vertices[i] = 0;
         }
 
         for (int i = 0; i < indicesSize; ++i) {
-            indices[i] = i * 2; // Example initialization
+            indices[i] = 0;
         }
     }
 
@@ -147,7 +144,5 @@ public:
         std::cout << std::endl;
     }
 };
-
-
 
 #endif //OBJECTLOADER_H

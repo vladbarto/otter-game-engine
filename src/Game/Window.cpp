@@ -8,10 +8,10 @@ Window::Window() :
 			true,				//vsync
 			4,					//OpenGL Version Major
 			0,					//OpenGL Version Minor	=> Here the OpenGL Version is 3.3
-			"Visual Computing Praktikum",			//Window title
+			"Otter Engine",			//Window title
 			4,					//MSAA samples for default framebuffer
 			false,				//use latest available OpenGL version (instead of the one specified above)
-			60.0)				//Update frequency
+			144.0)				//Update frequency
 {}
 
 Window::~Window()
