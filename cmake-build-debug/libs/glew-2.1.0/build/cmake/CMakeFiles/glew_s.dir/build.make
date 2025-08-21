@@ -53,10 +53,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL
+CMAKE_SOURCE_DIR = /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include libs/glew-2.1.0/build/cmake/CMakeFiles/glew_s.dir/depend.make
@@ -70,18 +70,18 @@ include libs/glew-2.1.0/build/cmake/CMakeFiles/glew_s.dir/progress.make
 include libs/glew-2.1.0/build/cmake/CMakeFiles/glew_s.dir/flags.make
 
 libs/glew-2.1.0/build/cmake/CMakeFiles/glew_s.dir/__/__/src/glew.c.o: libs/glew-2.1.0/build/cmake/CMakeFiles/glew_s.dir/flags.make
-libs/glew-2.1.0/build/cmake/CMakeFiles/glew_s.dir/__/__/src/glew.c.o: /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/libs/glew-2.1.0/src/glew.c
+libs/glew-2.1.0/build/cmake/CMakeFiles/glew_s.dir/__/__/src/glew.c.o: /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/glew-2.1.0/src/glew.c
 libs/glew-2.1.0/build/cmake/CMakeFiles/glew_s.dir/__/__/src/glew.c.o: libs/glew-2.1.0/build/cmake/CMakeFiles/glew_s.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object libs/glew-2.1.0/build/cmake/CMakeFiles/glew_s.dir/__/__/src/glew.c.o"
-	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug/libs/glew-2.1.0/build/cmake && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libs/glew-2.1.0/build/cmake/CMakeFiles/glew_s.dir/__/__/src/glew.c.o -MF CMakeFiles/glew_s.dir/__/__/src/glew.c.o.d -o CMakeFiles/glew_s.dir/__/__/src/glew.c.o -c /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/libs/glew-2.1.0/src/glew.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object libs/glew-2.1.0/build/cmake/CMakeFiles/glew_s.dir/__/__/src/glew.c.o"
+	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug/libs/glew-2.1.0/build/cmake && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libs/glew-2.1.0/build/cmake/CMakeFiles/glew_s.dir/__/__/src/glew.c.o -MF CMakeFiles/glew_s.dir/__/__/src/glew.c.o.d -o CMakeFiles/glew_s.dir/__/__/src/glew.c.o -c /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/glew-2.1.0/src/glew.c
 
 libs/glew-2.1.0/build/cmake/CMakeFiles/glew_s.dir/__/__/src/glew.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/glew_s.dir/__/__/src/glew.c.i"
-	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug/libs/glew-2.1.0/build/cmake && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/libs/glew-2.1.0/src/glew.c > CMakeFiles/glew_s.dir/__/__/src/glew.c.i
+	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug/libs/glew-2.1.0/build/cmake && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/glew-2.1.0/src/glew.c > CMakeFiles/glew_s.dir/__/__/src/glew.c.i
 
 libs/glew-2.1.0/build/cmake/CMakeFiles/glew_s.dir/__/__/src/glew.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/glew_s.dir/__/__/src/glew.c.s"
-	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug/libs/glew-2.1.0/build/cmake && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/libs/glew-2.1.0/src/glew.c -o CMakeFiles/glew_s.dir/__/__/src/glew.c.s
+	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug/libs/glew-2.1.0/build/cmake && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/glew-2.1.0/src/glew.c -o CMakeFiles/glew_s.dir/__/__/src/glew.c.s
 
 # Object files for target glew_s
 glew_s_OBJECTS = \
@@ -93,19 +93,19 @@ glew_s_EXTERNAL_OBJECTS =
 lib/libGLEWd.a: libs/glew-2.1.0/build/cmake/CMakeFiles/glew_s.dir/__/__/src/glew.c.o
 lib/libGLEWd.a: libs/glew-2.1.0/build/cmake/CMakeFiles/glew_s.dir/build.make
 lib/libGLEWd.a: libs/glew-2.1.0/build/cmake/CMakeFiles/glew_s.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library ../../../../lib/libGLEWd.a"
-	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug/libs/glew-2.1.0/build/cmake && $(CMAKE_COMMAND) -P CMakeFiles/glew_s.dir/cmake_clean_target.cmake
-	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug/libs/glew-2.1.0/build/cmake && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/glew_s.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library ../../../../lib/libGLEWd.a"
+	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug/libs/glew-2.1.0/build/cmake && $(CMAKE_COMMAND) -P CMakeFiles/glew_s.dir/cmake_clean_target.cmake
+	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug/libs/glew-2.1.0/build/cmake && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/glew_s.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 libs/glew-2.1.0/build/cmake/CMakeFiles/glew_s.dir/build: lib/libGLEWd.a
 .PHONY : libs/glew-2.1.0/build/cmake/CMakeFiles/glew_s.dir/build
 
 libs/glew-2.1.0/build/cmake/CMakeFiles/glew_s.dir/clean:
-	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug/libs/glew-2.1.0/build/cmake && $(CMAKE_COMMAND) -P CMakeFiles/glew_s.dir/cmake_clean.cmake
+	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug/libs/glew-2.1.0/build/cmake && $(CMAKE_COMMAND) -P CMakeFiles/glew_s.dir/cmake_clean.cmake
 .PHONY : libs/glew-2.1.0/build/cmake/CMakeFiles/glew_s.dir/clean
 
 libs/glew-2.1.0/build/cmake/CMakeFiles/glew_s.dir/depend:
-	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/libs/glew-2.1.0/build/cmake /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug/libs/glew-2.1.0/build/cmake /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug/libs/glew-2.1.0/build/cmake/CMakeFiles/glew_s.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/glew-2.1.0/build/cmake /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug/libs/glew-2.1.0/build/cmake /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug/libs/glew-2.1.0/build/cmake/CMakeFiles/glew_s.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : libs/glew-2.1.0/build/cmake/CMakeFiles/glew_s.dir/depend
 

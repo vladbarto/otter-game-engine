@@ -57,10 +57,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL
+CMAKE_SOURCE_DIR = /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug/CMakeFiles /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug/CMakeFiles /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -300,6 +300,30 @@ framework/OBJLoader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Praktikum.dir/build.make CMakeFiles/OpenGL_Praktikum.dir/framework/OBJLoader.cpp.s
 .PHONY : framework/OBJLoader.cpp.s
 
+framework/ObjectLoader.o: framework/ObjectLoader.cpp.o
+.PHONY : framework/ObjectLoader.o
+
+# target to build an object file
+framework/ObjectLoader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Praktikum.dir/build.make CMakeFiles/OpenGL_Praktikum.dir/framework/ObjectLoader.cpp.o
+.PHONY : framework/ObjectLoader.cpp.o
+
+framework/ObjectLoader.i: framework/ObjectLoader.cpp.i
+.PHONY : framework/ObjectLoader.i
+
+# target to preprocess a source file
+framework/ObjectLoader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Praktikum.dir/build.make CMakeFiles/OpenGL_Praktikum.dir/framework/ObjectLoader.cpp.i
+.PHONY : framework/ObjectLoader.cpp.i
+
+framework/ObjectLoader.s: framework/ObjectLoader.cpp.s
+.PHONY : framework/ObjectLoader.s
+
+# target to generate assembly for a file
+framework/ObjectLoader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Praktikum.dir/build.make CMakeFiles/OpenGL_Praktikum.dir/framework/ObjectLoader.cpp.s
+.PHONY : framework/ObjectLoader.cpp.s
+
 framework/OpenGLWindow.o: framework/OpenGLWindow.cpp.o
 .PHONY : framework/OpenGLWindow.o
 
@@ -396,6 +420,30 @@ src/Framework/Assets/ShaderProgram.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Praktikum.dir/build.make CMakeFiles/OpenGL_Praktikum.dir/src/Framework/Assets/ShaderProgram.cpp.s
 .PHONY : src/Framework/Assets/ShaderProgram.cpp.s
 
+src/Framework/Rendering/Material.o: src/Framework/Rendering/Material.cpp.o
+.PHONY : src/Framework/Rendering/Material.o
+
+# target to build an object file
+src/Framework/Rendering/Material.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Praktikum.dir/build.make CMakeFiles/OpenGL_Praktikum.dir/src/Framework/Rendering/Material.cpp.o
+.PHONY : src/Framework/Rendering/Material.cpp.o
+
+src/Framework/Rendering/Material.i: src/Framework/Rendering/Material.cpp.i
+.PHONY : src/Framework/Rendering/Material.i
+
+# target to preprocess a source file
+src/Framework/Rendering/Material.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Praktikum.dir/build.make CMakeFiles/OpenGL_Praktikum.dir/src/Framework/Rendering/Material.cpp.i
+.PHONY : src/Framework/Rendering/Material.cpp.i
+
+src/Framework/Rendering/Material.s: src/Framework/Rendering/Material.cpp.s
+.PHONY : src/Framework/Rendering/Material.s
+
+# target to generate assembly for a file
+src/Framework/Rendering/Material.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Praktikum.dir/build.make CMakeFiles/OpenGL_Praktikum.dir/src/Framework/Rendering/Material.cpp.s
+.PHONY : src/Framework/Rendering/Material.cpp.s
+
 src/Framework/Rendering/Primitives.o: src/Framework/Rendering/Primitives.cpp.o
 .PHONY : src/Framework/Rendering/Primitives.o
 
@@ -419,6 +467,30 @@ src/Framework/Rendering/Primitives.s: src/Framework/Rendering/Primitives.cpp.s
 src/Framework/Rendering/Primitives.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Praktikum.dir/build.make CMakeFiles/OpenGL_Praktikum.dir/src/Framework/Rendering/Primitives.cpp.s
 .PHONY : src/Framework/Rendering/Primitives.cpp.s
+
+src/Framework/SceneElements/GameObject.o: src/Framework/SceneElements/GameObject.cpp.o
+.PHONY : src/Framework/SceneElements/GameObject.o
+
+# target to build an object file
+src/Framework/SceneElements/GameObject.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Praktikum.dir/build.make CMakeFiles/OpenGL_Praktikum.dir/src/Framework/SceneElements/GameObject.cpp.o
+.PHONY : src/Framework/SceneElements/GameObject.cpp.o
+
+src/Framework/SceneElements/GameObject.i: src/Framework/SceneElements/GameObject.cpp.i
+.PHONY : src/Framework/SceneElements/GameObject.i
+
+# target to preprocess a source file
+src/Framework/SceneElements/GameObject.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Praktikum.dir/build.make CMakeFiles/OpenGL_Praktikum.dir/src/Framework/SceneElements/GameObject.cpp.i
+.PHONY : src/Framework/SceneElements/GameObject.cpp.i
+
+src/Framework/SceneElements/GameObject.s: src/Framework/SceneElements/GameObject.cpp.s
+.PHONY : src/Framework/SceneElements/GameObject.s
+
+# target to generate assembly for a file
+src/Framework/SceneElements/GameObject.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Praktikum.dir/build.make CMakeFiles/OpenGL_Praktikum.dir/src/Framework/SceneElements/GameObject.cpp.s
+.PHONY : src/Framework/SceneElements/GameObject.cpp.s
 
 src/Framework/SceneElements/Transform.o: src/Framework/SceneElements/Transform.cpp.o
 .PHONY : src/Framework/SceneElements/Transform.o
@@ -468,6 +540,30 @@ src/Game/Scene.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Praktikum.dir/build.make CMakeFiles/OpenGL_Praktikum.dir/src/Game/Scene.cpp.s
 .PHONY : src/Game/Scene.cpp.s
 
+src/Game/SceneManager.o: src/Game/SceneManager.cpp.o
+.PHONY : src/Game/SceneManager.o
+
+# target to build an object file
+src/Game/SceneManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Praktikum.dir/build.make CMakeFiles/OpenGL_Praktikum.dir/src/Game/SceneManager.cpp.o
+.PHONY : src/Game/SceneManager.cpp.o
+
+src/Game/SceneManager.i: src/Game/SceneManager.cpp.i
+.PHONY : src/Game/SceneManager.i
+
+# target to preprocess a source file
+src/Game/SceneManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Praktikum.dir/build.make CMakeFiles/OpenGL_Praktikum.dir/src/Game/SceneManager.cpp.i
+.PHONY : src/Game/SceneManager.cpp.i
+
+src/Game/SceneManager.s: src/Game/SceneManager.cpp.s
+.PHONY : src/Game/SceneManager.s
+
+# target to generate assembly for a file
+src/Game/SceneManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Praktikum.dir/build.make CMakeFiles/OpenGL_Praktikum.dir/src/Game/SceneManager.cpp.s
+.PHONY : src/Game/SceneManager.cpp.s
+
 src/Game/Window.o: src/Game/Window.cpp.o
 .PHONY : src/Game/Window.o
 
@@ -491,30 +587,6 @@ src/Game/Window.s: src/Game/Window.cpp.s
 src/Game/Window.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Praktikum.dir/build.make CMakeFiles/OpenGL_Praktikum.dir/src/Game/Window.cpp.s
 .PHONY : src/Game/Window.cpp.s
-
-src/compute_normals.o: src/compute_normals.cpp.o
-.PHONY : src/compute_normals.o
-
-# target to build an object file
-src/compute_normals.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Praktikum.dir/build.make CMakeFiles/OpenGL_Praktikum.dir/src/compute_normals.cpp.o
-.PHONY : src/compute_normals.cpp.o
-
-src/compute_normals.i: src/compute_normals.cpp.i
-.PHONY : src/compute_normals.i
-
-# target to preprocess a source file
-src/compute_normals.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Praktikum.dir/build.make CMakeFiles/OpenGL_Praktikum.dir/src/compute_normals.cpp.i
-.PHONY : src/compute_normals.cpp.i
-
-src/compute_normals.s: src/compute_normals.cpp.s
-.PHONY : src/compute_normals.s
-
-# target to generate assembly for a file
-src/compute_normals.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Praktikum.dir/build.make CMakeFiles/OpenGL_Praktikum.dir/src/compute_normals.cpp.s
-.PHONY : src/compute_normals.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -565,6 +637,9 @@ help:
 	@echo "... framework/OBJLoader.o"
 	@echo "... framework/OBJLoader.i"
 	@echo "... framework/OBJLoader.s"
+	@echo "... framework/ObjectLoader.o"
+	@echo "... framework/ObjectLoader.i"
+	@echo "... framework/ObjectLoader.s"
 	@echo "... framework/OpenGLWindow.o"
 	@echo "... framework/OpenGLWindow.i"
 	@echo "... framework/OpenGLWindow.s"
@@ -577,21 +652,27 @@ help:
 	@echo "... src/Framework/Assets/ShaderProgram.o"
 	@echo "... src/Framework/Assets/ShaderProgram.i"
 	@echo "... src/Framework/Assets/ShaderProgram.s"
+	@echo "... src/Framework/Rendering/Material.o"
+	@echo "... src/Framework/Rendering/Material.i"
+	@echo "... src/Framework/Rendering/Material.s"
 	@echo "... src/Framework/Rendering/Primitives.o"
 	@echo "... src/Framework/Rendering/Primitives.i"
 	@echo "... src/Framework/Rendering/Primitives.s"
+	@echo "... src/Framework/SceneElements/GameObject.o"
+	@echo "... src/Framework/SceneElements/GameObject.i"
+	@echo "... src/Framework/SceneElements/GameObject.s"
 	@echo "... src/Framework/SceneElements/Transform.o"
 	@echo "... src/Framework/SceneElements/Transform.i"
 	@echo "... src/Framework/SceneElements/Transform.s"
 	@echo "... src/Game/Scene.o"
 	@echo "... src/Game/Scene.i"
 	@echo "... src/Game/Scene.s"
+	@echo "... src/Game/SceneManager.o"
+	@echo "... src/Game/SceneManager.i"
+	@echo "... src/Game/SceneManager.s"
 	@echo "... src/Game/Window.o"
 	@echo "... src/Game/Window.i"
 	@echo "... src/Game/Window.s"
-	@echo "... src/compute_normals.o"
-	@echo "... src/compute_normals.i"
-	@echo "... src/compute_normals.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

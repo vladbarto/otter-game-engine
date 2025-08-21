@@ -53,10 +53,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL
+CMAKE_SOURCE_DIR = /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include libs/stb/CMakeFiles/stb.dir/depend.make
@@ -70,32 +70,32 @@ include libs/stb/CMakeFiles/stb.dir/progress.make
 include libs/stb/CMakeFiles/stb.dir/flags.make
 
 libs/stb/CMakeFiles/stb.dir/stb_image.c.o: libs/stb/CMakeFiles/stb.dir/flags.make
-libs/stb/CMakeFiles/stb.dir/stb_image.c.o: /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/libs/stb/stb_image.c
+libs/stb/CMakeFiles/stb.dir/stb_image.c.o: /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/stb/stb_image.c
 libs/stb/CMakeFiles/stb.dir/stb_image.c.o: libs/stb/CMakeFiles/stb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object libs/stb/CMakeFiles/stb.dir/stb_image.c.o"
-	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug/libs/stb && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libs/stb/CMakeFiles/stb.dir/stb_image.c.o -MF CMakeFiles/stb.dir/stb_image.c.o.d -o CMakeFiles/stb.dir/stb_image.c.o -c /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/libs/stb/stb_image.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object libs/stb/CMakeFiles/stb.dir/stb_image.c.o"
+	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug/libs/stb && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libs/stb/CMakeFiles/stb.dir/stb_image.c.o -MF CMakeFiles/stb.dir/stb_image.c.o.d -o CMakeFiles/stb.dir/stb_image.c.o -c /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/stb/stb_image.c
 
 libs/stb/CMakeFiles/stb.dir/stb_image.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/stb.dir/stb_image.c.i"
-	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug/libs/stb && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/libs/stb/stb_image.c > CMakeFiles/stb.dir/stb_image.c.i
+	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug/libs/stb && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/stb/stb_image.c > CMakeFiles/stb.dir/stb_image.c.i
 
 libs/stb/CMakeFiles/stb.dir/stb_image.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/stb.dir/stb_image.c.s"
-	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug/libs/stb && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/libs/stb/stb_image.c -o CMakeFiles/stb.dir/stb_image.c.s
+	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug/libs/stb && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/stb/stb_image.c -o CMakeFiles/stb.dir/stb_image.c.s
 
 libs/stb/CMakeFiles/stb.dir/stb_image_write.c.o: libs/stb/CMakeFiles/stb.dir/flags.make
-libs/stb/CMakeFiles/stb.dir/stb_image_write.c.o: /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/libs/stb/stb_image_write.c
+libs/stb/CMakeFiles/stb.dir/stb_image_write.c.o: /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/stb/stb_image_write.c
 libs/stb/CMakeFiles/stb.dir/stb_image_write.c.o: libs/stb/CMakeFiles/stb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object libs/stb/CMakeFiles/stb.dir/stb_image_write.c.o"
-	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug/libs/stb && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libs/stb/CMakeFiles/stb.dir/stb_image_write.c.o -MF CMakeFiles/stb.dir/stb_image_write.c.o.d -o CMakeFiles/stb.dir/stb_image_write.c.o -c /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/libs/stb/stb_image_write.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object libs/stb/CMakeFiles/stb.dir/stb_image_write.c.o"
+	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug/libs/stb && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libs/stb/CMakeFiles/stb.dir/stb_image_write.c.o -MF CMakeFiles/stb.dir/stb_image_write.c.o.d -o CMakeFiles/stb.dir/stb_image_write.c.o -c /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/stb/stb_image_write.c
 
 libs/stb/CMakeFiles/stb.dir/stb_image_write.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/stb.dir/stb_image_write.c.i"
-	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug/libs/stb && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/libs/stb/stb_image_write.c > CMakeFiles/stb.dir/stb_image_write.c.i
+	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug/libs/stb && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/stb/stb_image_write.c > CMakeFiles/stb.dir/stb_image_write.c.i
 
 libs/stb/CMakeFiles/stb.dir/stb_image_write.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/stb.dir/stb_image_write.c.s"
-	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug/libs/stb && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/libs/stb/stb_image_write.c -o CMakeFiles/stb.dir/stb_image_write.c.s
+	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug/libs/stb && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/stb/stb_image_write.c -o CMakeFiles/stb.dir/stb_image_write.c.s
 
 # Object files for target stb
 stb_OBJECTS = \
@@ -109,19 +109,19 @@ libs/stb/libstb.a: libs/stb/CMakeFiles/stb.dir/stb_image.c.o
 libs/stb/libstb.a: libs/stb/CMakeFiles/stb.dir/stb_image_write.c.o
 libs/stb/libstb.a: libs/stb/CMakeFiles/stb.dir/build.make
 libs/stb/libstb.a: libs/stb/CMakeFiles/stb.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C static library libstb.a"
-	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug/libs/stb && $(CMAKE_COMMAND) -P CMakeFiles/stb.dir/cmake_clean_target.cmake
-	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug/libs/stb && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/stb.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C static library libstb.a"
+	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug/libs/stb && $(CMAKE_COMMAND) -P CMakeFiles/stb.dir/cmake_clean_target.cmake
+	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug/libs/stb && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/stb.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 libs/stb/CMakeFiles/stb.dir/build: libs/stb/libstb.a
 .PHONY : libs/stb/CMakeFiles/stb.dir/build
 
 libs/stb/CMakeFiles/stb.dir/clean:
-	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug/libs/stb && $(CMAKE_COMMAND) -P CMakeFiles/stb.dir/cmake_clean.cmake
+	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug/libs/stb && $(CMAKE_COMMAND) -P CMakeFiles/stb.dir/cmake_clean.cmake
 .PHONY : libs/stb/CMakeFiles/stb.dir/clean
 
 libs/stb/CMakeFiles/stb.dir/depend:
-	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/libs/stb /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug/libs/stb /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug/libs/stb/CMakeFiles/stb.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/stb /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug/libs/stb /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug/libs/stb/CMakeFiles/stb.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : libs/stb/CMakeFiles/stb.dir/depend
 

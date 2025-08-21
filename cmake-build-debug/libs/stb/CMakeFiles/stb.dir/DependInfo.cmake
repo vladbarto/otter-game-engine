@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/libs/stb/stb_image.c" "libs/stb/CMakeFiles/stb.dir/stb_image.c.o" "gcc" "libs/stb/CMakeFiles/stb.dir/stb_image.c.o.d"
-  "/Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/libs/stb/stb_image_write.c" "libs/stb/CMakeFiles/stb.dir/stb_image_write.c.o" "gcc" "libs/stb/CMakeFiles/stb.dir/stb_image_write.c.o.d"
+  "/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/stb/stb_image.c" "libs/stb/CMakeFiles/stb.dir/stb_image.c.o" "gcc" "libs/stb/CMakeFiles/stb.dir/stb_image.c.o.d"
+  "/Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/stb/stb_image_write.c" "libs/stb/CMakeFiles/stb.dir/stb_image_write.c.o" "gcc" "libs/stb/CMakeFiles/stb.dir/stb_image_write.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

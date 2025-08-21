@@ -53,10 +53,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL
+CMAKE_SOURCE_DIR = /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug
 
 # Utility rule file for uninstall.
 
@@ -67,7 +67,7 @@ include libs/glm-master/CMakeFiles/uninstall.dir/compiler_depend.make
 include libs/glm-master/CMakeFiles/uninstall.dir/progress.make
 
 libs/glm-master/CMakeFiles/uninstall:
-	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug/libs/glm-master && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug/libs/glm-master/cmake_uninstall.cmake
+	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug/libs/glm-master && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug/libs/glm-master/cmake_uninstall.cmake
 
 uninstall: libs/glm-master/CMakeFiles/uninstall
 uninstall: libs/glm-master/CMakeFiles/uninstall.dir/build.make
@@ -78,10 +78,10 @@ libs/glm-master/CMakeFiles/uninstall.dir/build: uninstall
 .PHONY : libs/glm-master/CMakeFiles/uninstall.dir/build
 
 libs/glm-master/CMakeFiles/uninstall.dir/clean:
-	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug/libs/glm-master && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
+	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug/libs/glm-master && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
 .PHONY : libs/glm-master/CMakeFiles/uninstall.dir/clean
 
 libs/glm-master/CMakeFiles/uninstall.dir/depend:
-	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/libs/glm-master /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug/libs/glm-master /Users/vladbarto/Documents/PERSONAL_PROJECTS/F1_OpenGL/cmake-build-debug/libs/glm-master/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/libs/glm-master /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug/libs/glm-master /Users/vladbarto/Documents/PERSONAL_PROJECTS/otter-game-engine/cmake-build-debug/libs/glm-master/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : libs/glm-master/CMakeFiles/uninstall.dir/depend
 
